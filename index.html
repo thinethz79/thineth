@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Website - Dark Theme</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#6366F1', // Indigo-500 (Vibrant for dark mode)
+                        'secondary': '#34D399', // Emerald-400
+                        'dark-bg': '#0F172A', // Slate-900 (Main background)
+                        'dark-card': '#1E293B', // Slate-800 (Card backgrounds)
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic scroll animation */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom styling for the navigation link hover effect */
+        .nav-link:hover {
+            color: #34D399; /* secondary color */
+        }
+
+        /* Star SVG styling (filled) */
+        .star-filled {
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-gray-200 font-sans">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-dark-card shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary hover:text-secondary transition duration-300">
+                Thineth Bandara
+            </a>
+            <nav class="space-x-8 hidden md:flex">
+                <a href="#about" class="nav-link text-gray-400 font-medium transition duration-300">About</a>
+                <a href="#services" class="nav-link text-gray-400 font-medium transition duration-300">Services</a>
+                <a href="#ratings" class="nav-link text-gray-400 font-medium transition duration-300">Ratings</a>
+                <a href="#projects" class="nav-link text-gray-400 font-medium transition duration-300">Projects</a>
+                <a href="#contact" class="nav-link text-gray-400 font-medium transition duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-card px-4 pt-2 pb-4 space-y-2 border-t border-gray-700">
+            <a href="#about" class="nav-link block text-gray-400 hover:text-secondary transition duration-300">About</a>
+            <a href="#services" class="nav-link block text-gray-400 hover:text-secondary transition duration-300">Services</a>
+            <a href="#ratings" class="nav-link block text-gray-400 hover:text-secondary transition duration-300">Ratings</a>
+            <a href="#projects" class="nav-link block text-gray-400 hover:text-secondary transition duration-300">Projects</a>
+            <a href="#contact" class="nav-link block text-gray-400 hover:text-secondary transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="bg-dark-bg text-white py-20 sm:py-32 border-b border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="reveal-on-scroll">
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4 text-primary">
+                        Hello, I'm Thineth Bandara
+                    </h1>
+                    <p class="text-xl sm:text-2xl font-light mb-8 opacity-80">
+                        A Passionate Software Engineer, Designer, and Creator building innovative digital experiences.
+                    </p>
+                    <a href="#contact" class="inline-block 
+                        bg-gradient-to-r from-secondary to-primary 
+                        hover:from-primary hover:to-secondary 
+                        text-white font-bold py-3 px-10 rounded-full shadow-lg hover:shadow-2xl 
+                        ring-2 ring-secondary/50 hover:ring-primary/50 
+                        transition duration-300 transform hover:scale-105">
+                        Start A Project &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 sm:py-24 bg-dark-bg">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- UPDATED: Single column layout and text centering -->
+                <div class="reveal-on-scroll text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-secondary mb-6 border-b-2 border-primary pb-2 inline-block">
+                        About Me
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-4 leading-relaxed text-left">
+                        I’m **Thineth Bandara** — a chaos junkie, sophophile, and creator who thrives on challenges. I’m an entrepreneur, designer, and developer passionate about building innovative digital experiences.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-4 leading-relaxed text-left">
+                        I’m currently studying **Full-Stack Software Engineering** at the Java Institute for Advanced Technology, strengthening my skills in modern software development and scalable application design.
+                    </p>
+                    <p class="text-lg text-gray-400 mb-4 leading-relaxed text-left">
+                        As one of the top NFT freelancers on Fiverr, I’ve helped shape Sri Lanka’s freelancing community and inspired many to pursue creative independence. I also host one of Sri Lanka’s leading podcasts, recognized by USAID and ranked among the Top 10% on Spotify globally.
+                    </p>
+                    <p class="text-lg text-gray-400 leading-relaxed text-left">
+                        I thrive at the intersection of art, technology, and education, constantly exploring new ways to create, build, and inspire. Let's connect!
+                    </p>
+                    <a href="#contact" class="mt-8 inline-block text-primary hover:text-secondary font-semibold border-b border-primary hover:border-secondary transition duration-300">
+                        View Resume (Placeholder) &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services/Skills Section -->
+        <section id="services" class="py-16 sm:py-24 bg-dark-card border-y border-gray-800 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="reveal-on-scroll">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-secondary">My Focus</h2>
+                    <p class="text-xl text-gray-400 mb-12">I bring expertise in the following areas:</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="reveal-on-scroll bg-dark-bg p-8 rounded-xl shadow-2xl transform hover:scale-[1.03] transition duration-300 border border-gray-700">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9.25 21L12 19L14.75 21L14.25 17M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-3 text-white">Web Development</h3>
+                        <p class="text-gray-400">Building responsive, high-performance websites and applications using modern frameworks like React and Vue.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="reveal-on-scroll bg-dark-bg p-8 rounded-xl shadow-2xl transform hover:scale-[1.03] transition duration-300 delay-100 border border-gray-700">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21H3a2 2 0 01-2-2V5a2 2 0 012-2h18a2 2 0 012 2v14a2 2 0 01-2 2h-5m-7 0L8 9l5 5 2-2 5 5"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-3 text-white">UI/UX Design</h3>
+                        <p class="text-gray-400">Creating intuitive, beautiful, and accessible user interfaces focused on a seamless user experience.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="reveal-on-scroll bg-dark-bg p-8 rounded-xl shadow-2xl transform hover:scale-[1.03] transition duration-300 delay-200 border border-gray-700">
+                        <svg class="w-12 h-12 mx-auto mb-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4m-4 4l-4 4M6 16l-4-4m0 0l4-4m-4 4h16"></path></svg>
+                        <h3 class="text-2xl font-semibold mb-3 text-white">API Development</h3>
+                        <p class="text-gray-400">Designing and implementing robust, scalable backend services and RESTful APIs using Node.js or Python.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- NEW: Ratings/Testimonials Section -->
+        <section id="ratings" class="py-16 sm:py-24 bg-dark-bg border-y border-gray-800 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="reveal-on-scroll text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-secondary mb-4">Client Ratings & Testimonials</h2>
+                    <p class="text-xl text-gray-400">Trusted by clients globally for quality work across various platforms.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Star Rating Component for 5 stars (repeated in each testimonial) -->
+                    <!-- Rating 1 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01] col-span-1 md:col-span-2 lg:col-span-4">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">Strategic Full-Stack Development</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "Thineth took our complex web application brief and turned it into an elegant, scalable reality. The delivery was ahead of schedule, and his ability to communicate technical concepts clearly was a massive asset. Truly a 5-star development partner."
+                        </p>
+                        <p class="font-semibold text-primary">- David M., CEO of TechStart</p>
+                    </div>
+
+                    <!-- Rating 2 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01]">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">Exceptional NFT & Digital Art Design</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "The design for our new NFT collection was absolutely stunning. Thineth possesses an incredible intuition for current market trends and translated our vision into a unique, high-value asset. Exceptional design skills!"
+                        </p>
+                        <p class="font-semibold text-primary">- Sarah K., Crypto Artist</p>
+                    </div>
+
+                    <!-- Rating 3 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01] delay-100">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">Pristine Audio Production & Editing</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "We hired Thineth for post-production on our latest podcast. The sound quality is pristine, the editing is seamless, and he handled the complex multi-track audio perfectly. A game-changer for our media quality."
+                        </p>
+                        <p class="font-semibold text-primary">- Alex T., Media Producer</p>
+                    </div>
+
+                    <!-- Rating 4 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01] delay-200">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">Legacy System Migration & Debugging</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "Beyond just delivering code, Thineth provided strategic guidance. He efficiently diagnosed critical legacy bugs and executed a flawless, zero-downtime migration to a more robust, modern architecture. Highly recommend his engineering expertise."
+                        </p>
+                        <p class="font-semibold text-primary">- Jessica P., Software Manager</p>
+                    </div>
+                    
+                    <!-- Rating 5 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01]">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">UI/UX Redesign & Engagement Boost</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "Thineth revolutionized our user experience. The UI/UX redesign was modern, intuitive, and immediately increased user engagement metrics. He transformed our platform from functional to truly delightful."
+                        </p>
+                        <p class="font-semibold text-primary">- Omar F., Product Lead</p>
+                    </div>
+
+                    <!-- Rating 6 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01] delay-100">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">Robust Backend & API Architecture</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "When it comes to backend systems, Thineth is top-tier. He designed and implemented our scalable Node.js REST API—it's robust, secure, and easily handles our peak load requirements. Solid, dependable backend work."
+                        </p>
+                        <p class="font-semibold text-primary">- Chen L., Data Engineer</p>
+                    </div>
+
+                    <!-- Rating 7 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01] delay-200">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">Exceptional Commitment & Collaboration</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "The commitment and enthusiasm Thineth brings to a collaboration are infectious. He consistently went the extra mile, over-delivering on both technical functionality and creative design concepts. A motivating and valuable partner."
+                        </p>
+                        <p class="font-semibold text-primary">- Maria H., Project Collaborator</p>
+                    </div>
+
+                    <!-- Rating 8 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01]">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">Clear & Effective Tech Education</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "Thineth’s talent for explaining advanced tech is unmatched. His educational materials are insightful, well-structured, and break down the most complicated topics into segments that are easy to grasp and apply immediately."
+                        </p>
+                        <p class="font-semibold text-primary">- Ethan C., Tech Educator</p>
+                    </div>
+
+                    <!-- Rating 9 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01] delay-100">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">High Quality and Professional Polish</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "Thineth's professional standards are impeccable. He treated my project with the dedication of a co-founder, ensuring every detail was polished to perfection. His responsiveness and quality control are phenomenal."
+                        </p>
+                        <p class="font-semibold text-primary">- Robert G., Independent Designer</p>
+                    </div>
+
+                    <!-- Rating 10 -->
+                    <div class="reveal-on-scroll bg-dark-card p-6 rounded-xl shadow-lg border border-gray-700 hover:shadow-2xl transition duration-300 transform hover:scale-[1.01] delay-200">
+                        <div class="flex items-center mb-3">
+                            <div class="text-secondary flex space-x-0.5">
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                                <svg class="w-5 h-5 star-filled" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.27l-7.19-.61L12 2 9.19 8.66 2 9.27l5.46 4.6L5.82 21z"/></svg>
+                            </div>
+                            <span class="ml-4 text-sm font-medium text-white">Pixel-Perfect Front-End Implementation</span>
+                        </div>
+                        <p class="italic text-gray-300 mb-4 text-base leading-relaxed">
+                            "The level of detail Thineth commits to front-end implementation is astounding. He ensures the final product is pixel-perfect and exactly matches the design specifications. A pleasure to work with for high-fidelity output."
+                        </p>
+                        <p class="font-semibold text-primary">- Diana R., Creative Director</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 sm:py-24 bg-dark-card">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="reveal-on-scroll text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-primary mb-4">Featured Projects</h2>
+                    <p class="text-xl text-gray-400">A selection of my best work demonstrating my capabilities.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Project A -->
+                    <div class="reveal-on-scroll bg-dark-card rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 border border-gray-700">
+                        <div class="bg-gray-800 h-48 flex items-center justify-center">
+                            <img 
+                                src="https://placehold.co/600x400/1E293B/6366F1?text=</DEV>+Landing+Page" 
+                                alt="Screenshot of DevMaster Site" 
+                                class="object-cover w-full h-full" 
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/6366F1/E0E7FF?text=Project+A';">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Project A: DevMaster Site</h3>
+                            <p class="text-gray-400 mb-4">A modern development landing page/portfolio built for high performance and clean design.</p>
+                            <span class="inline-block bg-primary/70 text-white text-xs px-3 py-1 rounded-full mr-2">HTML/CSS</span>
+                            <span class="inline-block bg-primary/70 text-white text-xs px-3 py-1 rounded-full">Tailwind</span>
+                            <a href="https://devmaster.tiiny.site/" target="_blank" class="block mt-4 text-secondary hover:text-primary font-medium transition duration-300">
+                                Visit Site &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project B -->
+                    <div class="reveal-on-scroll bg-dark-card rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 delay-100 border border-gray-700">
+                        <div class="bg-gray-800 h-48 flex items-center justify-center">
+                            <img 
+                                src="https://placehold.co/600x400/000000/34D399?text=C:/>+SECURITY+LOGS" 
+                                alt="Screenshot of Yohan H4x Portfolio" 
+                                class="object-cover w-full h-full" 
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x400/34D399/1F2937?text=Project+B';">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-white mb-2">Project B: Yohan H4x Portfolio</h3>
+                            <p class="text-gray-400 mb-4">A sleek, professional portfolio showcasing work in cybersecurity and hacking/development.</p>
+                            <span class="inline-block bg-secondary/70 text-dark-bg text-xs px-3 py-1 rounded-full mr-2">Frontend</span>
+                            <span class="inline-block bg-secondary/70 text-dark-bg text-xs px-3 py-1 rounded-full">Netlify</span>
+                            <a href="https://yohanh4x.netlify.app/" target="_blank" class="block mt-4 text-secondary hover:text-primary font-medium transition duration-300">
+                                Visit Site &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 sm:py-24 bg-dark-bg border-t border-gray-800 text-white">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="reveal-on-scroll">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-primary">Let's Connect Directly</h2>
+                    <p class="text-xl font-light mb-8 opacity-80">
+                        The best way to reach me for projects and inquiries is via WhatsApp or Email.
+                    </p>
+                    
+                    <div class="space-y-6 bg-dark-card p-8 rounded-xl shadow-2xl text-gray-200 border border-gray-700">
+                        
+                        <!-- WhatsApp Link (using the number +94774337016) -->
+                        <a href="https://wa.me/94774337016" target="_blank"
+                            class="flex items-center justify-center w-full 
+                            bg-gradient-to-r from-green-500 to-green-600 
+                            hover:from-green-600 hover:to-green-700
+                            text-white font-bold py-4 px-6 rounded-full shadow-lg hover:shadow-xl 
+                            transition duration-300 transform hover:scale-[1.01]">
+                            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.003 2.002c-5.522 0-10 4.478-10 10s4.478 10 10 10 10-4.478 10-10-4.478-10-10-10zm0 18.2c-4.524 0-8.2-3.676-8.2-8.2s3.676-8.2 8.2-8.2 8.2 3.676 8.2 8.2-3.676 8.2-8.2 8.2zm1.88-3.085c-.097-.048-.6-.296-.693-.328-.097-.033-.169-.048-.242.048-.073.097-.282.328-.354.403-.073.073-.146.088-.27.033-.121-.048-.51-.189-.968-.6-.354-.316-.595-.705-.668-.83-.073-.121-.008-.194.053-.257.043-.053.097-.132.146-.194.048-.053.073-.097.097-.169.024-.073.012-.132-.008-.189-.024-.053-.242-.164-.338-.395-.097-.226-.184-.194-.282-.194-.097 0-.214-.012-.31-.012-.097 0-.25.048-.372.169-.121.121-.462.453-.462 1.106 0 .653.475 1.289.548 1.385.073.097.943 1.44 2.296 1.996 1.353.556 1.353.376 1.6.354.242-.024.6-.097.68-.595.08-.499.08-.282.053-.499zM8.342 5.093c-1.396 0-2.531 1.135-2.531 2.531s1.135 2.53 2.531 2.53c1.396 0 2.531-1.135 2.531-2.53s-1.135-2.531-2.531-2.531zm8.79 1.106c.097.024.184.073.282.121.097.048.194.121.282.194.085.073.16.146.226.242.066.097.121.194.169.31h.033l.033.097c.073.184.146.403.146.595.012.234-.024.462-.073.693-.048.234-.121.462-.206.67-.085.206-.184.403-.31.574-.125.171-.27.31-.444.403-.174.097-.367.146-.574.146-.206 0-.416-.048-.61-.132-.194-.085-.38-.206-.556-.354-.177-.152-.338-.328-.485-.526-.146-.194-.27-.416-.367-.668-.097-.25-.17-.526-.206-.81-.033-.282-.033-.574 0-.856.033-.282.097-.556.184-.81.088-.25.194-.475.328-.67.132-.194.282-.354.453-.475.169-.121.354-.206.548-.257.194-.048.388-.073.574-.073.189 0 .372.012.548.053z"/>
+                            </svg>
+                            WhatsApp Me (+94 77 433 7016)
+                        </a>
+                        
+                        <!-- Email Link -->
+                        <a href="mailto:your.email@example.com"
+                            class="flex items-center justify-center w-full 
+                            bg-gray-700 hover:bg-gray-600
+                            text-white font-bold py-4 px-6 rounded-full shadow-lg hover:shadow-xl 
+                            transition duration-300 transform hover:scale-[1.01]">
+                            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 14H4V8l8 5 8-5v12z"/>
+                            </svg>
+                            Email Me (your.email@example.com)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:flex md:justify-between md:items-center">
+            <p class="text-sm text-gray-400">&copy; <span id="current-year"></span> Thineth Bandara. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4 md:mt-0">
+                <!-- Social Media Icons (placeholders) -->
+                <a href="#" class="text-gray-400 hover:text-primary transition duration-300 transform hover:scale-110" aria-label="LinkedIn">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM4 11h4v10H4zM6 4a2 2 0 100 4 2 2 0 000-4z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary transition duration-300 transform hover:scale-110" aria-label="GitHub">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.113.82-.262.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.542-1.368-1.328-1.734-1.328-1.734-1.087-.745.084-.73.084-.73 1.205.084 1.838 1.237 1.838 1.237 1.07 1.836 2.809 1.305 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.31.467-2.38.12-3.22-.112-.303-.49-.49-1.32-.234 0 0-1.04-.325-3.4-.207-.35.1-.734.15-1.085.15-1.748 0-3.21-.557-4.331-1.428.163-.448.435-.985.83-1.666 0 0 .76-.112 2.492.95.706-.195 1.453-.292 2.215-.292.76.01 1.5.097 2.207.295 1.73-1.075 2.49-1.018 2.49-1.018.395.682.668 1.219.83 1.666.113.303.491.49.12.234-1.07.745-1.92.148-2.645-.23-1.385-1.637-2.667-3.666-2.667-5.931z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-primary transition duration-300 transform hover:scale-110" aria-label="Twitter">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.633 7.994c.005.083.005.166 0 .25 0 2.55-1.936 5.5-5.5 5.5-1.087 0-2.105-.316-2.953-.86c.38.04.757.06 1.14.06 1.996 0 3.834-.672 5.3-1.792-.614.11-1.25.17-1.895.17-.985 0-1.94-.3-2.738-.82 2.3.46 4.02-1.16 4.9-2.88-.2.03-.404.05-.615.05-.9 0-1.77-.3-2.458-.9-.688-.6-.995-1.4-.995-2.26v-.03c.646.36 1.396.58 2.18.6-1.554-.83-2.585-2.43-2.585-4.22 0-.93.25-1.8.69-2.52-2.5 3.06-4.17 6.64-4.36 10.36-.07.15-.09.31-.09.47 0 3.3 2.16 6.13 5.3 7.2-1.97.53-4.04.83-6.17.83-.4 0-.8-.04-1.19-.11 3.4 2.2 7.4 3.5 11.7 3.5 14.1 0 22.8-11.7 22.8-22.8 0-.35-.01-.69-.03-1.03.62-.48 1.16-1.08 1.58-1.76-.57.25-1.2.4-1.85.47.66-.4 1.16-1.08 1.4-1.86-.62.36-1.3.62-2.02.76z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile menu toggle logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Scroll-based reveal animation logic
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optionally stop observing once revealed
+                        // observer.unobserve(entry.target);
+                    } else {
+                        // Optional: remove 'active' when it scrolls out of view
+                        // entry.target.classList.remove('active');
+                    }
+                });
+            }, observerOptions);
+
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
